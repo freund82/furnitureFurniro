@@ -2,13 +2,15 @@
 
 :root{
     font-size:62.5%;
+    --black:#000;
+    --16px:1.6rem;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
     width:100%;
     max-width:144rem;
-    margin:0;
+    margin:0 auto;
     padding:0;
 }
 
@@ -26,4 +28,10 @@ h1,h2,h3,h4,h5,h6{
     width:100%;
     max-width:123.6rem;
     margin:0 auto;
+}
+
+a{
+    text-decoration: none;
+    color:var(--black);
+    cursor: pointer;
 }
