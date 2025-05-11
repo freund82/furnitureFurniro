@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 
 export default function Layout({children}) {
   return (
-    <div className="layout">
+    <div className="layout"> {/*Шаблон сайта/страницы*/}
       <Header />
       <main>
         {children}
