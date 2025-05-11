@@ -2,13 +2,17 @@
 
 :root{
     font-size:62.5%;
+    --white:#FFF;
     --black:#000;
     --grey:#F4F4F4;
     --darkGrey:#9F9F9F;
     --beige:#FFF3E3;
+    --lightBrown:#B88E2F;
     --14px:1.4rem;
     --16px:1.6rem;
+    --18px:1.8rem;
     --24px:2.4rem;
+    --52px:5.2rem;
 }
 
 body{

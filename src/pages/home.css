@@ -1,12 +1,60 @@
 & .header-inner{
+    position:relative;
     width: 100%;
     height:71.683rem;
     background-image: url("./../assets/images/header__inner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index:100;
 
-   
+   & .header-inner-block{
+            position:absolute;
+            top:15.3rem;
+            right:5.8rem;
+            width:100%;
+            max-width:64.3rem;
+            height:44.3rem;
+            background-color: var(--beige);
+            border-radius:1rem;
+            padding: 6.2rem 4.3rem 3.7rem 3.9rem;
+
+            & .header-inner-block-suptitle{
+                font-size:var(--16px);
+                font-weight:600;
+                color:var(--black);
+                margin-bottom: 0.4rem;
+                letter-spacing: 0.3rem;
+                margin-top:0;
+            }
+            & .header-inner-block-title{
+                font-size:var(--52px);
+                font-weight:700;
+                color:var(--lightBrown);
+                margin-bottom: 1.7rem;
+                line-height:1.2;
+            }
+
+            & .header-inner-block-text{
+                font-size:var(--18px);
+                font-weight:500;
+                color:var(--black);
+                margin-bottom: 4.6rem;
+                margin-top:0;
+            }
+
+            & .header-inner-block-button{
+                width:22.2rem;
+                height:7.4rem;
+                border:none;
+                font-size:var(--16px);
+                text-transform:uppercase;
+                color:var(--white);
+                font-weight:bold;
+                background-color: var(--lightBrown);
+                cursor:pointer;
+            }
+        }
 }
  @media(max-width: 768px){
     & .header-inner{
