@@ -1,7 +1,26 @@
 import { Link } from "react-router-dom";
+import { useActionState } from "react";
 import "./footer.css";
 
 export default function Footer() {
+
+const [state, formAction, isPending] = useActionState(
+    async (prevState, formData) => {
+      const email = formData.get("email");
+      console.log("Подписка на email:", email);
+      
+      // Здесь можно добавить запрос к API (например, через fetch)
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+      });
+      
+      if (!res.ok) return "Ошибка подписки";
+      return "Спасибо за подписку!";
+    },
+    null // Начальное состояние
+  );
+
   return (
     <footer>
       <div className="footer-container">
@@ -26,10 +45,13 @@ export default function Footer() {
           </div>
           <div className="footer-column">
             <h5 className="footer-innerTitle">Newsletter</h5>
-            <input className="footer-input" type="email" placeholder="Enter Your Email Address" /><span className="footer-button" >Subscribe</span>
+            <form action={formAction}>
+              <input className="footer-input" type="email" name="email" placeholder="Enter Your Email Address" /><button className="footer-button" type="submit" disabled={isPending}>{isPending ? "Отправка..." : "Subscribe"}</button>
+              {state && <p className="footer-state">{state}</p>}
+            </form>
           </div>
         </div>
-        <div class="footer-copyright">
+        <div className="footer-copyright">
           <p>© 2023 furniro. All rights reserved</p>
         </div>
       </div>

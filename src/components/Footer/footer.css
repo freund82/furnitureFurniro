@@ -13,9 +13,10 @@ footer{
         & .footer-columns{
             display:flex;
             justify-content:space-around;
+            flex-wrap: wrap;
 
             & .footer-column{
-                flex:1 1 0;
+                flex:1 1 1;
 
                 & .footer-title{
                     font-size:var(--24px);
@@ -56,15 +57,28 @@ footer{
                 }
 
                 & .footer-button{
+                    outline:none;
+                    border:none;
+                    background:none;
                     text-transform: uppercase;
                     text-decoration: underline;
                     font-size:var(--14px);
                     font-weight:600;
                     vertical-align: bottom;
                     text-underline-offset: 0.8rem;
-                    line-height:1.9;
+                    line-height:1.8;
                     cursor:pointer;
+
+                    & .footer-button:disabled{
+                        cursor:not-allowed;
+                        pointer-events:none;
+                        opacity:0.5;
+                    }
                 }
+                & .footer-state{
+                    font-size:var(--14px);
+                    color:var(--darkGrey);
+                }   
             }
         }
 
