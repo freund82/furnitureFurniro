@@ -3,7 +3,11 @@
 :root{
     font-size:62.5%;
     --black:#000;
+    --grey:#F4F4F4;
+    --darkGrey:#9F9F9F;
+    --14px:1.4rem;
     --16px:1.6rem;
+    --24px:2.4rem;
 }
 
 body{

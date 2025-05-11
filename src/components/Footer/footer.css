@@ -1,0 +1,77 @@
+footer{
+    width:100%;
+    max-width:144rem;
+    border-top:0.2rem solid var(--grey);
+
+    & .footer-container{
+        width:100%;
+        max-width:124rem;
+        margin:0 auto;
+        margin-top:4.8rem;
+        
+
+        & .footer-columns{
+            display:flex;
+            justify-content:space-around;
+
+            & .footer-column{
+                flex:1 1 0;
+
+                & .footer-title{
+                    font-size:var(--24px);
+                    margin-bottom:5rem;
+                }
+
+                & .footer-address{
+                    width:100%;
+                    max-width:28.5rem;
+                    color:var(--darkGrey);
+                    font-size:var(--16px);
+                }
+
+                & .footer-innerTitle{
+                    font-size:var(--16px);
+                    color:var(--darkGrey);
+                    font-weight:400;
+                    margin-bottom:4.5rem;
+                }
+
+                & .footer-link{
+                    font-size:var(--16px);
+                    font-weight:500;
+                    line-height:3;
+                }
+
+                & .footer-input{
+                    width:20rem;
+                    border:none;
+                    border-bottom:0.1rem solid var(--black);
+                    padding:0.5rem;
+                    padding-left:0;
+                    padding-bottom:0.4rem;
+                    font-size:var(--14px);
+                    outline: none;
+                    font-family:'Poppins', sans-serif;
+                    margin-right:1.1rem;
+                }
+
+                & .footer-button{
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    font-size:var(--14px);
+                    font-weight:600;
+                    vertical-align: bottom;
+                    text-underline-offset: 0.8rem;
+                    line-height:1.9;
+                    cursor:pointer;
+                }
+            }
+        }
+
+        & .footer-copyright{
+            border-top:solid 0.1rem var(--darkGrey);
+            font-size:var(--16px);
+            padding-top:3.5rem;
+        }
+    }
+}
