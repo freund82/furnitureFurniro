@@ -4,6 +4,7 @@
     font-size:62.5%;
     --white:#FFF;
     --black:#000;
+    --lightBlack:#666666;
     --grey:#F4F4F4;
     --darkGrey:#9F9F9F;
     --beige:#FFF3E3;
@@ -11,7 +12,9 @@
     --14px:1.4rem;
     --16px:1.6rem;
     --18px:1.8rem;
+    --20px:2rem;
     --24px:2.4rem;
+    --32px:3.2rem;
     --52px:5.2rem;
 }
 
@@ -32,6 +35,11 @@ body{
 h1,h2,h3,h4,h5,h6{
     margin:0;
 }
+
+p{
+    margin:0;
+}
+
 
 .container{
     width:100%;
