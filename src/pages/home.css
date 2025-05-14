@@ -115,6 +115,7 @@
         display:flex;
         gap:3.2rem;
         flex-wrap: wrap;
+        justify-content: space-evenly;
 
         & .products-block-product{
             position: relative;
