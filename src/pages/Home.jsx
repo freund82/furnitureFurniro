@@ -1,5 +1,9 @@
+import "./home.css";
+import { Link } from "react-router-dom";
 import Layout from '../components/Layout/Layout';
-import "./home.css"
+import Share from "../assets/icons/share.svg";
+import Compare from "../assets/icons/compare.svg";
+import Like from "../assets/icons/like.svg";
 
 export default function Home() {
 
@@ -43,6 +47,7 @@ export default function Home() {
                 <div className="products-block-products">
                   {/*Product card*/}
                     <div className="products-block-product">
+                        <span className="products-block-product-discount">-30%</span>
                         <img src="/furnitureImages/furniture/Syltherine.jpg" alt="Syltherine" />
                         <div className="products-block-product-info">
                           <h3 className="products-block-product-title">Syltherine</h3>
@@ -52,6 +57,14 @@ export default function Home() {
                             <span className="products-block-product-price oldPrice">Rp 3.500.000</span>
                           </div>
                         </div>
+                         <div className="products-block-product-buttons-block">
+                              <button className="products-block-product-buy-button">Add to cart</button>
+                              <div className="products-block-product-svg-block">
+                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
+                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
+                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
+                              </div>
+                          </div>
                     </div>
                     {/* End of Product card*/}
                     {/*Product card*/}
@@ -64,10 +77,19 @@ export default function Home() {
                             <span className="products-block-product-price">Rp 2.500.000</span>
                           </div>
                         </div>
+                        <div className="products-block-product-buttons-block">
+                              <button className="products-block-product-buy-button">Add to cart</button>
+                              <div className="products-block-product-svg-block">
+                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
+                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
+                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
+                              </div>
+                          </div>
                     </div>
                     {/* End of Product card*/}
                     {/*Product card*/}
                     <div className="products-block-product">
+                      <span className="products-block-product-discount">-50%</span>
                         <img src="/furnitureImages/furniture/Lolito.jpg" alt="Lolito" />
                         <div className="products-block-product-info">
                           <h3 className="products-block-product-title">Lolito</h3>
@@ -77,10 +99,19 @@ export default function Home() {
                             <span className="products-block-product-price oldPrice">Rp 14.000.000</span>
                           </div>
                         </div>
+                        <div className="products-block-product-buttons-block">
+                              <button className="products-block-product-buy-button">Add to cart</button>
+                              <div className="products-block-product-svg-block">
+                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
+                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
+                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
+                              </div>
+                          </div>
                     </div>
                     {/* End of Product card*/}
                     {/*Product card*/}
                     <div className="products-block-product">
+                      <span className="products-block-product-type">New</span>
                         <img src="/furnitureImages/furniture/Respira.jpg" alt="Respira" />
                         <div className="products-block-product-info">
                           <h3 className="products-block-product-title">Respira</h3>
@@ -89,6 +120,14 @@ export default function Home() {
                             <span className="products-block-product-price">Rp 500.000</span>
                           </div>
                         </div>
+                        <div className="products-block-product-buttons-block">
+                              <button className="products-block-product-buy-button">Add to cart</button>
+                              <div className="products-block-product-svg-block">
+                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
+                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
+                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
+                              </div>
+                          </div>
                     </div>
                     {/* End of Product card*/}
                     {/*Product card*/}
@@ -101,10 +140,19 @@ export default function Home() {
                             <span className="products-block-product-price">Rp 1.500.000</span>
                           </div>
                         </div>
+                        <div className="products-block-product-buttons-block">
+                              <button className="products-block-product-buy-button">Add to cart</button>
+                              <div className="products-block-product-svg-block">
+                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
+                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
+                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
+                              </div>
+                          </div>
                     </div>
                     {/* End of Product card*/}
                      {/*Product card*/}
                     <div className="products-block-product">
+                      <span className="products-block-product-type">New</span>
                         <img src="/furnitureImages/furniture/Muggo.jpg" alt="Muggo" />
                         <div className="products-block-product-info">
                           <h3 className="products-block-product-title">Muggo</h3>
@@ -113,10 +161,19 @@ export default function Home() {
                             <span className="products-block-product-price">Rp 150.000</span>
                           </div>
                         </div>
+                        <div className="products-block-product-buttons-block">
+                              <button className="products-block-product-buy-button">Add to cart</button>
+                              <div className="products-block-product-svg-block">
+                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
+                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
+                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
+                              </div>
+                          </div>
                     </div>
                     {/* End of Product card*/}
                      {/*Product card*/}
                     <div className="products-block-product">
+                      <span className="products-block-product-discount">-50%</span>
                         <img src="/furnitureImages/furniture/Pingky.jpg" alt="Pingky" />
                         <div className="products-block-product-info">
                           <h3 className="products-block-product-title">Pingky</h3>
@@ -126,10 +183,19 @@ export default function Home() {
                             <span className="products-block-product-price oldPrice">Rp 14.000.000</span>
                           </div>
                         </div>
+                        <div className="products-block-product-buttons-block">
+                              <button className="products-block-product-buy-button">Add to cart</button>
+                              <div className="products-block-product-svg-block">
+                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
+                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
+                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
+                              </div>
+                          </div>
                     </div>
                     {/* End of Product card*/}
                     {/*Product card*/}
                     <div className="products-block-product">
+                      <span className="products-block-product-type">New</span>
                         <img src="/furnitureImages/furniture/Potty.jpg" alt="Potty" />
                         <div className="products-block-product-info">
                           <h3 className="products-block-product-title">Potty</h3>
@@ -138,9 +204,18 @@ export default function Home() {
                             <span className="products-block-product-price">Rp 500.000</span>
                           </div>
                         </div>
+                        <div className="products-block-product-buttons-block">
+                              <button className="products-block-product-buy-button">Add to cart</button>
+                              <div className="products-block-product-svg-block">
+                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
+                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
+                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
+                              </div>
+                          </div>
                     </div>
                     {/* End of Product card*/}
                 </div>
+                <button className="products-block-show-more-button">Show More</button>
         </section>      
       </Layout>
     </>

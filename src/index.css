@@ -4,14 +4,18 @@
     font-size:62.5%;
     --white:#FFF;
     --black:#000;
+    --lightLightBlack:#3A3A3A;
     --lightBlack:#666666;
     --semiLightBlack:#898989;
     --grey:#F4F4F4;
     --lightGrey:#F4F5F7;
     --darkGrey:#9F9F9F;
     --lightLightGrey:#B0B0B0;
+    --lightGreen:#2EC1AC;
     --beige:#FFF3E3;
     --lightBrown:#B88E2F;
+    --gold:#B88E2F;
+    --red:#E97171;
     --14px:1.4rem;
     --16px:1.6rem;
     --18px:1.8rem;
