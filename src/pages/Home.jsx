@@ -216,6 +216,24 @@ export default function Home() {
                     {/* End of Product card*/}
                 </div>
                 <button className="products-block-show-more-button">Show More</button>
+        </section>
+        {/*Slider section*/}
+        <section className="slider-section">
+          <div className="slider-section-firstColumn">
+                <p className="slider-section-firstColumn-title">50+ Beautiful rooms inspiration</p>
+                <p className="slider-section-firstColumn-text">Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
+                <button className="slider-section-firstColumn-button">Explore More</button>
+          </div>
+          <div className="slider-section-secondColumn">
+            <img className="slide" src="/slider/bedroom_slider.jpg" alt="Slider" />
+            <div>
+              <div className="sliderBlock">
+                <img className="slide" src="/slider/bedroomOne.jpg" alt="BedroomFirstSlider" />
+                 <img className="slide" src="/slider/bedroomTwo.jpg" alt="BedroomSecondSlider" />
+              </div>
+                 <p>1</p>
+            </div>
+          </div>
         </section>      
       </Layout>
     </>
