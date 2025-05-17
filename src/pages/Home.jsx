@@ -4,6 +4,8 @@ import Layout from '../components/Layout/Layout';
 import Share from "../assets/icons/share.svg";
 import Compare from "../assets/icons/compare.svg";
 import Like from "../assets/icons/like.svg";
+import ArrowSmall from "../assets/icons/arrowSmall.svg";
+import SliderArrow from "../assets/icons/arrow.svg";
 
 export default function Home() {
 
@@ -225,13 +227,33 @@ export default function Home() {
                 <button className="slider-section-firstColumn-button">Explore More</button>
           </div>
           <div className="slider-section-secondColumn">
-            <img className="slide" src="/slider/bedroom_slider.jpg" alt="Slider" />
+            <div className="sliderBlock-section">
+                 <img className="slide" src="/slider/bedroom_slider.jpg" alt="Slider" />
             <div>
               <div className="sliderBlock">
-                <img className="slide" src="/slider/bedroomOne.jpg" alt="BedroomFirstSlider" />
+                <div className="sliderBlockHorizontal">
+                 <img className="slide" src="/slider/bedroomOne.jpg" alt="BedroomFirstSlider" />
                  <img className="slide" src="/slider/bedroomTwo.jpg" alt="BedroomSecondSlider" />
+                 <img className="slide" src="/slider/bedroomTwo.jpg" alt="BedroomThirdSlider" />
+                 <span className="sliderHorizontal-button"><img src={SliderArrow} alt="SliderRightArrow" /></span>
+                 <span className="sliderHorizontal-button left hide"><img src={SliderArrow} alt="SliderRightArrow" /></span>
+                </div>
+                  <div className="sliderBlockHorizontal-buttons">
+                    <span className="sliderBlock-button sliderButtonActive"></span><span className="sliderBlock-button"></span><span className="sliderBlock-button"></span><span className="sliderBlock-button"></span>
+                  </div>
               </div>
-                 <p>1</p>
+                 <div className="sliderInfoBlock">
+                    <div className="sliderInfoText">
+                      <div className="sliderInfoText-numberSection">
+                        <span>01</span><span className="sliderInfoTetx-line"></span><span className="sliderInfoText-number">Bed Room</span>
+                      </div>
+                      <h2 className="sliderInfoText-title">Inner Peace</h2>
+                    </div>
+                    <div class="sliderBlock-arrow">
+                      <img src={ArrowSmall} alt="SliderRightArrow" />
+                    </div>
+                 </div>
+            </div>
             </div>
           </div>
         </section>      
