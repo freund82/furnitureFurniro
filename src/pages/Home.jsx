@@ -256,7 +256,26 @@ export default function Home() {
             </div>
             </div>
           </div>
-        </section>      
+        </section>
+        {/*Slider section END*/}
+        {/* #Funiro Furniture section */}
+        <section className="furniture-section">
+          <div className="furniture-section-title-block">
+            <span className="furniture-section-suptitle">Share your setup with</span>
+            <h2 className="furniture-section-title">#FuniroFurniture</h2>
+          </div>
+          <div className="furniture-section-grid">
+            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image36.jpg" alt="Furniture36" />
+            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image38.jpg" alt="Furniture38" />
+            <img className="furniture-section-grid-item middle" src="/furnitureImages/funiroFurniture/image40.jpg" alt="Furniture40" />  
+            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image43.jpg" alt="Furniture43" />
+            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image45.jpg" alt="Furniture45" />  
+            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image37.jpg" alt="Furniture37" />    
+            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image39.jpg" alt="Furniture39" />  
+            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image41.jpg" alt="Furniture41"/>  
+            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image44.jpg" alt="Furniture44" />   
+          </div>
+        </section>
       </Layout>
     </>
   );
