@@ -265,15 +265,15 @@ export default function Home() {
             <h2 className="furniture-section-title">#FuniroFurniture</h2>
           </div>
           <div className="furniture-section-grid">
-            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image36.jpg" alt="Furniture36" />
-            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image38.jpg" alt="Furniture38" />
-            <img className="furniture-section-grid-item middle" src="/furnitureImages/funiroFurniture/image40.jpg" alt="Furniture40" />  
-            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image43.jpg" alt="Furniture43" />
-            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image45.jpg" alt="Furniture45" />  
-            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image37.jpg" alt="Furniture37" />    
-            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image39.jpg" alt="Furniture39" />  
-            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image41.jpg" alt="Furniture41"/>  
-            <img className="furniture-section-grid-item" src="/furnitureImages/funiroFurniture/image44.jpg" alt="Furniture44" />   
+            <img className="furniture-section-grid-item first" src="/furnitureImages/funiroFurniture/image36.jpg" alt="Furniture36" />
+            <img className="furniture-section-grid-item second" src="/furnitureImages/funiroFurniture/image38.jpg" alt="Furniture38" />
+            <img className="furniture-section-grid-item third" src="/furnitureImages/funiroFurniture/image40.jpg" alt="Furniture40" />  
+            <img className="furniture-section-grid-item fourth" src="/furnitureImages/funiroFurniture/image43.jpg" alt="Furniture43" />
+            <img className="furniture-section-grid-item fifth" src="/furnitureImages/funiroFurniture/image45.jpg" alt="Furniture45" />  
+            <img className="furniture-section-grid-item six" src="/furnitureImages/funiroFurniture/image37.jpg" alt="Furniture37" />    
+            <img className="furniture-section-grid-item seven" src="/furnitureImages/funiroFurniture/image39.jpg" alt="Furniture39" />  
+            <img className="furniture-section-grid-item eight" src="/furnitureImages/funiroFurniture/image41.jpg" alt="Furniture41"/>  
+            <img className="furniture-section-grid-item nine" src="/furnitureImages/funiroFurniture/image44.jpg" alt="Furniture44" />
           </div>
         </section>
       </Layout>
