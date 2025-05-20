@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Syltherine",
+      "description": "Stylish cafe chair",
+      "price": 2500000,
+      "oldPrice": 3500000,
+      "discount": 30,
+      "image": "/furnitureImages/furniture/Syltherine.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Leviosa",
+      "description": "Stylish cafe chair",
+      "price": 2500000,
+      "image": "/furnitureImages/furniture/Leviosa.jpg"
+    }
+  ]
+}
