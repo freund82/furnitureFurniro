@@ -7,14 +7,86 @@
       "price": 2500000,
       "oldPrice": 3500000,
       "discount": 30,
-      "image": "/furnitureImages/furniture/Syltherine.jpg"
+      "image": "/furnitureImages/furniture/Syltherine.jpg",
+      "new":false,
+      "likes": 0
     },
     {
       "id": 2,
       "name": "Leviosa",
       "description": "Stylish cafe chair",
       "price": 2500000,
-      "image": "/furnitureImages/furniture/Leviosa.jpg"
+      "oldPrice": "",
+      "discount": "",
+      "new":false,
+      "image": "/furnitureImages/furniture/Leviosa.jpg",
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "name": "Lolito",
+      "description": "Luxury big sofa",
+      "price": 7000000,
+      "oldPrice": 14000000,
+      "discount": 50,
+      "new":false,
+      "image": "/furnitureImages/furniture/Lolito.jpg",
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "name": "Respira",
+      "description": "Outdoor bar table and stool",
+      "price": 500000,
+      "oldPrice": "",
+      "discount": "",
+      "new":true,
+      "image": "/furnitureImages/furniture/Respira.jpg",
+      "likes": 0
+    },
+     {
+      "id": 5,
+      "name": "Grifo",
+      "description": "Night lamp",
+      "price": 1500000,
+      "oldPrice": "",
+      "discount": "",
+      "new":false,
+      "image": "/furnitureImages/furniture/Grifo.jpg",
+      "likes": 0
+    },
+     {
+      "id": 6,
+      "name": "Muggo",
+      "description": "Small mug",
+      "price": 150000,
+      "oldPrice": "",
+      "discount": "",
+      "new":true,
+      "image": "/furnitureImages/furniture/Muggo.jpg",
+      "likes": 0
+    },
+     {
+      "id": 7,
+      "name": "Pingky",
+      "description": "Cute bed set",
+      "price": 7000000,
+      "oldPrice": 14000000,
+      "discount": 50,
+      "new":false,
+      "image": "/furnitureImages/furniture/Pingky.jpg",
+      "likes": 0
+    },
+     {
+      "id": 8,
+      "name": "Potty",
+      "description": "Minimalist flower pot",
+      "price":500000,
+      "oldPrice": "",
+      "discount": "",
+      "new":true,
+      "image": "/furnitureImages/furniture/Pingky.jpg",
+      "likes": 0
     }
   ]
 }

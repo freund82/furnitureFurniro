@@ -1,11 +1,8 @@
 import "./home.css";
-import { Link } from "react-router-dom";
 import Layout from '../components/Layout/Layout';
-import Share from "../assets/icons/share.svg";
-import Compare from "../assets/icons/compare.svg";
-import Like from "../assets/icons/like.svg";
 import ArrowSmall from "../assets/icons/arrowSmall.svg";
 import SliderArrow from "../assets/icons/arrow.svg";
+import ProductsList from "../components/Products/ProductsList.jsx";
 
 export default function Home() {
 
@@ -46,177 +43,7 @@ export default function Home() {
         {/*Our products*/}
         <section className="products-block">
                 <h2 className="products-block-title">Our Products</h2>
-                <div className="products-block-products">
-                  {/*Product card*/}
-                    <div className="products-block-product">
-                        <span className="products-block-product-discount">-30%</span>
-                        <img src="/furnitureImages/furniture/Syltherine.jpg" alt="Syltherine" />
-                        <div className="products-block-product-info">
-                          <h3 className="products-block-product-title">Syltherine</h3>
-                          <p className="products-block-product-description">Stylish cafe chair</p>
-                          <div className="products-block-product-price-block">
-                            <span className="products-block-product-price">Rp 2.500.000</span>
-                            <span className="products-block-product-price oldPrice">Rp 3.500.000</span>
-                          </div>
-                        </div>
-                         <div className="products-block-product-buttons-block">
-                              <button className="products-block-product-buy-button">Add to cart</button>
-                              <div className="products-block-product-svg-block">
-                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
-                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
-                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
-                              </div>
-                          </div>
-                    </div>
-                    {/* End of Product card*/}
-                    {/*Product card*/}
-                    <div className="products-block-product">
-                        <img src="/furnitureImages/furniture/Leviosa.jpg" alt="Leviosa" />
-                        <div className="products-block-product-info">
-                          <h3 className="products-block-product-title">Leviosa</h3>
-                          <p className="products-block-product-description">Stylish cafe chair</p>
-                          <div className="products-block-product-price-block">
-                            <span className="products-block-product-price">Rp 2.500.000</span>
-                          </div>
-                        </div>
-                        <div className="products-block-product-buttons-block">
-                              <button className="products-block-product-buy-button">Add to cart</button>
-                              <div className="products-block-product-svg-block">
-                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
-                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
-                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
-                              </div>
-                          </div>
-                    </div>
-                    {/* End of Product card*/}
-                    {/*Product card*/}
-                    <div className="products-block-product">
-                      <span className="products-block-product-discount">-50%</span>
-                        <img src="/furnitureImages/furniture/Lolito.jpg" alt="Lolito" />
-                        <div className="products-block-product-info">
-                          <h3 className="products-block-product-title">Lolito</h3>
-                          <p className="products-block-product-description">Luxury big sofa</p>
-                          <div className="products-block-product-price-block">
-                            <span className="products-block-product-price">Rp 7.000.000</span>
-                            <span className="products-block-product-price oldPrice">Rp 14.000.000</span>
-                          </div>
-                        </div>
-                        <div className="products-block-product-buttons-block">
-                              <button className="products-block-product-buy-button">Add to cart</button>
-                              <div className="products-block-product-svg-block">
-                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
-                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
-                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
-                              </div>
-                          </div>
-                    </div>
-                    {/* End of Product card*/}
-                    {/*Product card*/}
-                    <div className="products-block-product">
-                      <span className="products-block-product-type">New</span>
-                        <img src="/furnitureImages/furniture/Respira.jpg" alt="Respira" />
-                        <div className="products-block-product-info">
-                          <h3 className="products-block-product-title">Respira</h3>
-                          <p className="products-block-product-description">Outdoor bar table and stool</p>
-                          <div className="products-block-product-price-block">
-                            <span className="products-block-product-price">Rp 500.000</span>
-                          </div>
-                        </div>
-                        <div className="products-block-product-buttons-block">
-                              <button className="products-block-product-buy-button">Add to cart</button>
-                              <div className="products-block-product-svg-block">
-                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
-                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
-                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
-                              </div>
-                          </div>
-                    </div>
-                    {/* End of Product card*/}
-                    {/*Product card*/}
-                    <div className="products-block-product">
-                        <img src="/furnitureImages/furniture/Grifo.jpg" alt="Grifo" />
-                        <div className="products-block-product-info">
-                          <h3 className="products-block-product-title">Grifo</h3>
-                          <p className="products-block-product-description">Night lamp</p>
-                          <div className="products-block-product-price-block">
-                            <span className="products-block-product-price">Rp 1.500.000</span>
-                          </div>
-                        </div>
-                        <div className="products-block-product-buttons-block">
-                              <button className="products-block-product-buy-button">Add to cart</button>
-                              <div className="products-block-product-svg-block">
-                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
-                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
-                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
-                              </div>
-                          </div>
-                    </div>
-                    {/* End of Product card*/}
-                     {/*Product card*/}
-                    <div className="products-block-product">
-                      <span className="products-block-product-type">New</span>
-                        <img src="/furnitureImages/furniture/Muggo.jpg" alt="Muggo" />
-                        <div className="products-block-product-info">
-                          <h3 className="products-block-product-title">Muggo</h3>
-                          <p className="products-block-product-description">Small mug</p>
-                          <div className="products-block-product-price-block">
-                            <span className="products-block-product-price">Rp 150.000</span>
-                          </div>
-                        </div>
-                        <div className="products-block-product-buttons-block">
-                              <button className="products-block-product-buy-button">Add to cart</button>
-                              <div className="products-block-product-svg-block">
-                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
-                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
-                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
-                              </div>
-                          </div>
-                    </div>
-                    {/* End of Product card*/}
-                     {/*Product card*/}
-                    <div className="products-block-product">
-                      <span className="products-block-product-discount">-50%</span>
-                        <img src="/furnitureImages/furniture/Pingky.jpg" alt="Pingky" />
-                        <div className="products-block-product-info">
-                          <h3 className="products-block-product-title">Pingky</h3>
-                          <p className="products-block-product-description">Cute bed set</p>
-                          <div className="products-block-product-price-block">
-                            <span className="products-block-product-price">Rp 7.000.000</span>
-                            <span className="products-block-product-price oldPrice">Rp 14.000.000</span>
-                          </div>
-                        </div>
-                        <div className="products-block-product-buttons-block">
-                              <button className="products-block-product-buy-button">Add to cart</button>
-                              <div className="products-block-product-svg-block">
-                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
-                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
-                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
-                              </div>
-                          </div>
-                    </div>
-                    {/* End of Product card*/}
-                    {/*Product card*/}
-                    <div className="products-block-product">
-                      <span className="products-block-product-type">New</span>
-                        <img src="/furnitureImages/furniture/Potty.jpg" alt="Potty" />
-                        <div className="products-block-product-info">
-                          <h3 className="products-block-product-title">Potty</h3>
-                          <p className="products-block-product-description">Minimalist flower pot</p>
-                          <div className="products-block-product-price-block">
-                            <span className="products-block-product-price">Rp 500.000</span>
-                          </div>
-                        </div>
-                        <div className="products-block-product-buttons-block">
-                              <button className="products-block-product-buy-button">Add to cart</button>
-                              <div className="products-block-product-svg-block">
-                                <Link to="/" ><img src={Share} alt="Share" />Share</Link>
-                                <Link to="/"><img src={Compare} alt="Share" />Compare</Link>
-                                <Link to="/" ><img src={Like} alt="Like" />Like</Link>
-                              </div>
-                          </div>
-                    </div>
-                    {/* End of Product card*/}
-                </div>
+                <ProductsList />
                 <button className="products-block-show-more-button">Show More</button>
         </section>
         {/*Slider section*/}
@@ -249,7 +76,7 @@ export default function Home() {
                       </div>
                       <h2 className="sliderInfoText-title">Inner Peace</h2>
                     </div>
-                    <div class="sliderBlock-arrow">
+                    <div className="sliderBlock-arrow">
                       <img src={ArrowSmall} alt="SliderRightArrow" />
                     </div>
                  </div>
