@@ -1,9 +1,21 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+// Функция для загрузки лайков из localStorage
+const loadLikes = () => {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('productLikes');
+    return saved ? JSON.parse(saved) : {};
+  }
+  return {};
+};
+
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
   const response = await fetch(`${import.meta.env.VITE_API_URL}/products`);
   const data = await response.json();
-  return data;
+  return data.map((product) => ({
+    ...product,
+    isLiked: loadLikes()[product.id] || false,
+  }));
 });
 
 const productsSlice = createSlice({
@@ -14,7 +26,22 @@ const productsSlice = createSlice({
     error: null,
   },
   reducers: {
-    // синхронные редьюсеры при необходимости
+    toggleLike(state, action) {
+      const product = state.items.find((item) => item.id === action.payload);
+      if (product) {
+        product.isLiked = !product.isLiked;
+
+        // Сохраняем в localStorage
+        const likes = loadLikes();
+        likes[product.id] = product.isLiked;
+        localStorage.setItem('productLikes', JSON.stringify(likes));
+
+        // Обновляем счетчик
+        if (product.likes !== undefined) {
+          product.likes += product.isLiked ? 1 : -1;
+        }
+      }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -32,4 +59,5 @@ const productsSlice = createSlice({
   },
 });
 
+export const { toggleLike } = productsSlice.actions;
 export default productsSlice.reducer;
