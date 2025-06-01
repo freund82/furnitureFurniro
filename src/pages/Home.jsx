@@ -1,8 +1,7 @@
 import "./home.css";
 import Layout from '../components/Layout/Layout';
-import ArrowSmall from "../assets/icons/arrowSmall.svg";
-import SliderArrow from "../assets/icons/arrow.svg";
 import ProductsList from "../components/Products/ProductsList.jsx";
+import Slider from "../components/Slider/Slider";
 
 export default function Home() {
 
@@ -53,36 +52,7 @@ export default function Home() {
                 <p className="slider-section-firstColumn-text">Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
                 <button className="slider-section-firstColumn-button">Explore More</button>
           </div>
-          <div className="slider-section-secondColumn">
-            <div className="sliderBlock-section">
-                 <img className="slide" src="/slider/bedroom_slider.jpg" alt="Slider" />
-            <div>
-              <div className="sliderBlock">
-                <div className="sliderBlockHorizontal">
-                 <img className="slide" src="/slider/bedroomOne.jpg" alt="BedroomFirstSlider" />
-                 <img className="slide" src="/slider/bedroomTwo.jpg" alt="BedroomSecondSlider" />
-                 <img className="slide" src="/slider/bedroomTwo.jpg" alt="BedroomThirdSlider" />
-                 <span className="sliderHorizontal-button"><img src={SliderArrow} alt="SliderRightArrow" /></span>
-                 <span className="sliderHorizontal-button left hide"><img src={SliderArrow} alt="SliderRightArrow" /></span>
-                </div>
-                  <div className="sliderBlockHorizontal-buttons">
-                    <span className="sliderBlock-button sliderButtonActive"></span><span className="sliderBlock-button"></span><span className="sliderBlock-button"></span><span className="sliderBlock-button"></span>
-                  </div>
-              </div>
-                 <div className="sliderInfoBlock">
-                    <div className="sliderInfoText">
-                      <div className="sliderInfoText-numberSection">
-                        <span>01</span><span className="sliderInfoTetx-line"></span><span className="sliderInfoText-number">Bed Room</span>
-                      </div>
-                      <h2 className="sliderInfoText-title">Inner Peace</h2>
-                    </div>
-                    <div className="sliderBlock-arrow">
-                      <img src={ArrowSmall} alt="SliderRightArrow" />
-                    </div>
-                 </div>
-            </div>
-            </div>
-          </div>
+         <Slider />
         </section>
         {/*Slider section END*/}
         {/* #Funiro Furniture section */}
