@@ -4,86 +4,113 @@ import ArrowSmall from "../../assets/icons/arrowSmall.svg";
 import SliderArrow from "../../assets/icons/arrow.svg";
 
 export default function Slider(){
-
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [currentImage, setCurrentImage] = useState(1);
-   
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const slidesToShow = 3;
 
-    const slides=[
+    const slides = [
         {
-            id:1,
-            number:"01",
-            title:"Inner Peace",
-            category:"Bed Room",
-            images:[
+            id: 1,
+            number: "01",
+            title: "Inner Peace",
+            category: "Bed Room",
+            images: [
                 "/slider/bedroom_slider.jpg",
                 "/slider/bedroomOne.jpg",
                 "/slider/bedroomTwo.jpg",
                 "/slider/bedroomTwo.jpg",
             ]
         },
-         {
-            id:2,
-            number:"02",
-            title:"Lux Room",
-            category:"Bed Room",
-            images:[
+        {
+            id: 2,
+            number: "02",
+            title: "Lux Room",
+            category: "Bed Room",
+            images: [
                 "/slider/bedroom_slider2.jpg",
                 "/slider/livingRoomOne.jpg",
                 "/slider/livingRoomTwo.jpg",
                 "/slider/livingRoomThree.jpg",
             ]
         },
-    ]
+    ];
 
-    const nextSlide=()=>{
-        setCurrentSlide((prev)=>(prev === slides.length-1 ? 0 : prev+1));
-    }
+    const sliderImages = slides.map(slide => slide.images.slice(1));
 
-    const prevSlide=()=>{
-        setCurrentSlide((prev)=>(prev === 0 ? slides.length-1 : prev-1));
-    }
+    const nextSlide = () => {
+        setCurrentSlide(prev => (prev + 1) % slides.length);
+    };
 
-    const nextImage=()=>{
-        setCurrentImage((prev)=>(prev === slides[currentSlide].images.length-1 ? 1 : prev+1));
-    }
+    const nextHorizontalSlide = () => {
+        setCurrentImageIndex(prev => (prev + 1) % (sliderImages[currentSlide].length - slidesToShow + 1));
+    };
 
-    const prevImage=()=>{
-        setCurrentImage((prev)=>(prev === 0 ? slides[currentSlide].images.length-1 : prev-1));
-    }
+    const prevHorizontalSlide = () => {
+        setCurrentImageIndex(prev => 
+            prev === 0 ? sliderImages[currentSlide].length - slidesToShow : prev - 1
+        );
+    };
+
+    const selectImage = (index) => {
+        setCurrentImageIndex(index);
+    };
 
     return(
         <div className="slider-section-secondColumn">
             <div className="sliderBlock-section">
-                 <img className="slide" src={slides[currentSlide].images[0]} alt={slides[currentSlide].title} />
-            <div>
-              <div className="sliderBlock">
-                <div className="sliderBlockHorizontal">
-                    {
-                        slides[currentSlide].images.slice(1).map((_, index) =>
-                             <img key={index} className="slide" src={slides[currentSlide].images[currentImage]} alt={`Slide ${index+1}`} />
-                        )
-                    }
-                 <span className="sliderHorizontal-button" onClick={nextImage}><img src={SliderArrow} alt="SliderRightArrow" /></span>
-                 <span className="sliderHorizontal-button left hide" onClick={prevImage}><img src={SliderArrow} alt="SliderRightArrow" /></span>
+                <img className="slide" src={slides[currentSlide].images[0]} alt="main" />
+                <div>
+                    <div className="sliderBlock">
+                        <div className="sliderHorizontal-container">
+                            <div 
+                                className="sliderBlockHorizontal" 
+                                style={{
+                                    transform: `translateX(-${currentImageIndex * (100 / slidesToShow)}%)`,
+                                    transition: 'transform 0.5s ease'
+                                }}
+                            >
+                                {sliderImages[currentSlide].map((image, index) => (
+                                    <img 
+                                        key={index} 
+                                        className="horizontal-slide" 
+                                        src={image} 
+                                        alt={`slide-${index}`} 
+                                        onClick={() => selectImage(index)}
+                                    />
+                                ))}
+                            </div>
+                            <span className="sliderHorizontal-button right" onClick={nextHorizontalSlide}>
+                                <img src={SliderArrow} alt="Next" />
+                            </span>
+                            <span className="sliderHorizontal-button left" onClick={prevHorizontalSlide}>
+                                <img src={SliderArrow} alt="Previous" />
+                            </span>
+                        </div>
+                        <div className="sliderBlockHorizontal-buttons">
+                            {sliderImages[currentSlide].map((_, index) => (
+                                <span 
+                                    key={index}
+                                    className={`sliderBlock-button ${index === currentImageIndex ? 'sliderButtonActive' : ''}`}
+                                    onClick={() => selectImage(index)}
+                                ></span>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="sliderInfoBlock">
+                        <div className="sliderInfoText">
+                            <div className="sliderInfoText-numberSection">
+                                <span>0</span>
+                                <span className="sliderInfoTetx-line"></span>
+                                <span className="sliderInfoText-number">{slides[currentSlide].number}</span>
+                            </div>
+                            <h2 className="sliderInfoText-title">{slides[currentSlide].title}</h2>
+                        </div>
+                        <div className="sliderBlock-arrow">
+                            <img src={ArrowSmall} alt="Next" onClick={nextSlide} />
+                        </div>
+                    </div>
                 </div>
-                  <div className="sliderBlockHorizontal-buttons">
-                    <span className="sliderBlock-button sliderButtonActive"></span><span className="sliderBlock-button"></span><span className="sliderBlock-button"></span><span className="sliderBlock-button"></span>
-                  </div>
-              </div>
-                 <div className="sliderInfoBlock">
-                    <div className="sliderInfoText">
-                      <div className="sliderInfoText-numberSection">
-                        <span>{slides[currentSlide].number}</span><span className="sliderInfoTetx-line"></span><span className="sliderInfoText-number">{slides[currentSlide].category}</span>
-                      </div>
-                      <h2 className="sliderInfoText-title">{slides[currentSlide].title}</h2>
-                    </div>
-                    <div className="sliderBlock-arrow">
-                      <img src={ArrowSmall} alt="SliderRightArrow" onClick={nextSlide} />
-                    </div>
-                 </div>
             </div>
-            </div>
-          </div>
+        </div>
     )
 }
