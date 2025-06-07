@@ -41,10 +41,9 @@ export default function Slider(){
         setCurrentSlide(prev => (prev + 1) % slides.length);
     };
 
-    const nextHorizontalSlide = () => {
-        setCurrentImageIndex(prev => (prev + 1) % (sliderImages[currentSlide].length - slidesToShow + 1));
-    };
-
+  const nextHorizontalSlide = () => {
+    setCurrentImageIndex(prev => (prev + 1) % sliderImages[currentSlide].length);
+};
     const prevHorizontalSlide = () => {
         setCurrentImageIndex(prev => 
             prev === 0 ? sliderImages[currentSlide].length - slidesToShow : prev - 1
@@ -82,9 +81,13 @@ export default function Slider(){
                             <span className="sliderHorizontal-button right" onClick={nextHorizontalSlide}>
                                 <img src={SliderArrow} alt="Next" />
                             </span>
-                            <span className="sliderHorizontal-button left" onClick={prevHorizontalSlide}>
-                                <img src={SliderArrow} alt="Previous" />
-                            </span>
+                            {
+                                currentImageIndex > 0 && (
+                                    <span className="sliderHorizontal-button left" onClick={prevHorizontalSlide}>
+                                        <img src={SliderArrow} alt="Previous" />
+                                    </span>
+                                )
+                            }
                         </div>
                         <div className="sliderBlockHorizontal-buttons">
                             {sliderImages[currentSlide].map((_, index) => (
