@@ -57,7 +57,7 @@ export default function Slider(){
     return(
         <div className="slider-section-secondColumn">
             <div className="sliderBlock-section">
-                <img className="slide" src={slides[currentSlide].images[0]} alt="main" />
+                <img className="slide" src={slides[currentSlide].images[currentImageIndex]} alt="main" />
                 <div>
                     <div className="sliderBlock">
                         <div className="sliderHorizontal-container">

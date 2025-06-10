@@ -9,6 +9,11 @@
     overflow-x: hidden;
     z-index: 100;
 
+    .slide{
+      width:40.4rem;
+      height:58.2rem;
+    }
+
 
     .sliderBlock {
       display: flex;
