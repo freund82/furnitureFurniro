@@ -102,9 +102,9 @@ export default function Slider(){
                     <div className="sliderInfoBlock">
                         <div className="sliderInfoText">
                             <div className="sliderInfoText-numberSection">
-                                <span>0</span>
+                                <span>{slides[currentSlide].number}</span>
                                 <span className="sliderInfoTetx-line"></span>
-                                <span className="sliderInfoText-number">{slides[currentSlide].number}</span>
+                                <span className="sliderInfoText-number">{slides[currentSlide].category}</span>
                             </div>
                             <h2 className="sliderInfoText-title">{slides[currentSlide].title}</h2>
                         </div>
